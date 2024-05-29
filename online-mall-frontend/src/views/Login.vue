@@ -1,8 +1,8 @@
 <!--
  * 用户登录页
  *
- * @Author: ShanZhu
- * @Date: 2023-11-11
+ * @Author: ZX
+ * @Date: 2024-5-28
 -->
 <template>
  <div class="login-window">
@@ -13,6 +13,8 @@
        <div class="login-window-index-left-textarea">
           <input v-model="user.username" type="text" placeholder="请输入账号">
           <input v-model="user.password" type="password" placeholder="请输入密码">
+          <button class="button1" type="success" @click="onSubmit">登录</button>
+          <button class="button2" @click="$router.push('/register')">注册</button>
        </div>
      </div>
      <div class="login-window-index-right">
@@ -95,16 +97,19 @@ export default {
 .login-window-index-left{
 
 }
-.login-window-index-left h1{
-  //margin-top: 105px;
-}
 .login-window-index-left h2{
-  margin-top: 100px;
+  margin-top: 70px;
 }
 .login-window-index-left-textarea{
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 .login-window-index-left-textarea input{
+  width: 300px;
+  height: 60px;
   line-height: 20px;
   border-radius: 50px;
   background-color: rgba(255,255,255,1);
@@ -113,11 +118,52 @@ export default {
   text-align: left;
   font-family: Microsoft Yahei;
   border: 1px solid rgba(187,187,187,1);
+  padding: 10px; /* 可以调整这个值来设置边距的大小 */
+  box-sizing: border-box; /* 确保边距和边框不会影响元素总宽度 */
+}
+.login-window-index-left-textarea button{
+  width: 300px;
+  height: 60px;
+  left: 317px;
+  top: 659px;
+  line-height: 20px;
+  border-radius: 50px;
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+  border: 1px solid rgba(187,187,187,1);
+}
+.button1{
+  margin-top: 30px;
+  background-color: #DFE1F2;
+  color: #323894;
+}
+.button2{
+  background-color: #323894;
+  color: #DFE1F2;
+}
+.button1:hover{
+  background-color: #CFD1E2;
+  color: #222884;
+}
+.button2:hover{
+  background-color: #222884;
+  color: #CFD1E2;
+}
+.button1:active{
+  background-color: #DFE1F2;
+  color: #323894;
+}
+.button2:active{
+  background-color: #323894;
+  color: #DFE1F2;
 }
 .login-window-index-right{
   display: flex;
   align-items: center;
   overflow: hidden;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .login-window-index-right img{
   width: 100%;
