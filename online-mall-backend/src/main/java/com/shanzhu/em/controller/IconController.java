@@ -16,9 +16,6 @@ import java.util.Map;
 
 /**
  * 图标 控制层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @RestController
 @RequestMapping("/api/icon")

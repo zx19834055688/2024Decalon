@@ -10,8 +10,6 @@ import javax.annotation.Resource;
 /**
  * 拦截器配置
  *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {

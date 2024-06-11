@@ -19,9 +19,6 @@ import java.util.List;
  * 用户 控制层
  * <p>
  * '@CrossOrigin' 注解允许接口跨域
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @CrossOrigin
 @RestController

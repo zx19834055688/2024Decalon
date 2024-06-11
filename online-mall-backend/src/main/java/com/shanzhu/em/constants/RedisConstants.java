@@ -3,8 +3,6 @@ package com.shanzhu.em.constants;
 /**
  * Redis 常量
  *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 public class RedisConstants {
 

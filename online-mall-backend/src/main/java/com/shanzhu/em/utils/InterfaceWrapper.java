@@ -5,9 +5,6 @@ import java.util.Map;
 
 /**
  * 接口响应包装
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 public class InterfaceWrapper {
 

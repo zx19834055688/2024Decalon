@@ -11,9 +11,6 @@ import java.util.Map;
 
 /**
  * 订单 持久层（mapper）
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Mapper
 public interface OrderMapper extends BaseMapper<Order> {

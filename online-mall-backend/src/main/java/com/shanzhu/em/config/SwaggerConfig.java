@@ -15,8 +15,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * <p>
  * 什么是Swagger? (https://www.zhihu.com/question/63803795/answer/2637117349)
  *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Configuration
 @EnableSwagger2

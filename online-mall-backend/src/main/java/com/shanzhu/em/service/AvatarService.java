@@ -26,9 +26,6 @@ import java.net.URLEncoder;
 
 /**
  * 用户头像相关 服务层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Slf4j
 @Service

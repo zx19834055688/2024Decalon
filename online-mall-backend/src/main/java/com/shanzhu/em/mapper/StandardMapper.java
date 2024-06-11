@@ -9,9 +9,6 @@ import org.apache.ibatis.annotations.Update;
 
 /**
  * 商品规格持久层 （mapper）
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Mapper
 public interface StandardMapper extends BaseMapper<Standard> {

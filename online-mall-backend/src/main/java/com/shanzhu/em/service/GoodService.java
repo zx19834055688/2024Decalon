@@ -28,9 +28,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 商品 服务层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Service
 @RequiredArgsConstructor

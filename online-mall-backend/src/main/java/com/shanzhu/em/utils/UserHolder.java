@@ -4,9 +4,6 @@ import com.shanzhu.em.entity.User;
 
 /**
  * 用户信息
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 public class UserHolder {
 

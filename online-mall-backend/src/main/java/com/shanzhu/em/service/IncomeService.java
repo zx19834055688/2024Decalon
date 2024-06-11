@@ -14,9 +14,6 @@ import java.util.Map;
 
 /**
  * 营收统计图 服务层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Service
 @RequiredArgsConstructor

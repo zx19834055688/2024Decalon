@@ -13,9 +13,6 @@ import java.util.List;
 
 /**
  * 商品 持久层（mapper）
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Mapper
 public interface GoodMapper extends BaseMapper<Good> {

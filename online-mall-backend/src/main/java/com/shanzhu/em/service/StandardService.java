@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 商品规格 服务层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Service
 public class StandardService extends ServiceImpl<StandardMapper, Standard> {

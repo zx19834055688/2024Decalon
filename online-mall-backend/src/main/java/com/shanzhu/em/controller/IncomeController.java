@@ -12,9 +12,6 @@ import java.util.Map;
 
 /**
  * 营收统计接口
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @RestController
 @RequestMapping("/api/income")

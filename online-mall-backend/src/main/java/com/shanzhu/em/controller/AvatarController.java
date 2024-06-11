@@ -16,9 +16,6 @@ import java.util.Map;
 
 /**
  * 用户头像相关业务 控制层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @RestController
 @RequestMapping("/avatar")

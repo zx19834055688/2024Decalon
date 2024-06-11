@@ -10,9 +10,6 @@ import java.util.List;
 
 /**
  * 轮播图相关 业务层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Service
 @RequiredArgsConstructor

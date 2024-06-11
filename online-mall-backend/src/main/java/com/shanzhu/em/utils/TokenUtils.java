@@ -15,9 +15,6 @@ import java.util.Objects;
 
 /**
  * token 工具
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Component
 public class TokenUtils {

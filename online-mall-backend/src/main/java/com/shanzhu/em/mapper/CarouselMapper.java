@@ -8,9 +8,6 @@ import java.util.List;
 
 /**
  * 轮播图 持久层（mapper）
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Mapper
 public interface CarouselMapper extends BaseMapper<Carousel> {

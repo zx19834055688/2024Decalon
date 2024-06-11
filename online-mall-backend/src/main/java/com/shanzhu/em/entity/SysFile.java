@@ -11,8 +11,6 @@ import lombok.NoArgsConstructor;
 /**
  * 用户上传文件
  *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Data
 @NoArgsConstructor

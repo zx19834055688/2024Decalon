@@ -12,8 +12,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  *
  * 什么是redis? (https://worktile.com/kb/ask/8838.html)
  *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Configuration
 public class RedisConfig {
@@ -28,10 +26,12 @@ public class RedisConfig {
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
         RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(factory);
+        //装饰者模式，设计模式的一种
         template.setKeySerializer(new StringRedisSerializer());
         template.setHashKeySerializer(new StringRedisSerializer());
         template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
         template.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());
+
         template.afterPropertiesSet();
         return template;
     }

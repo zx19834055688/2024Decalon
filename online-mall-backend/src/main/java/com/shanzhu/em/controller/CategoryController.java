@@ -12,9 +12,6 @@ import java.util.Map;
 
 /**
  * 商品分类 控制层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @RestController
 @RequestMapping("/api/category")

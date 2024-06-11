@@ -8,9 +8,6 @@ import java.util.List;
 
 /**
  * 图标持久层（mapper）
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Mapper
 public interface IconMapper extends BaseMapper<Icon> {

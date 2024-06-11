@@ -16,9 +16,6 @@ import java.util.List;
 
 /**
  * 商品 控制层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @RestController
 @RequestMapping("/api/good")

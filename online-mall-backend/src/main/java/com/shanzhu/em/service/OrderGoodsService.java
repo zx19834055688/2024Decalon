@@ -9,9 +9,6 @@ import javax.annotation.Resource;
 
 /**
  * 订单商品 服务层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Service
 public class OrderGoodsService extends ServiceImpl<OrderGoodsMapper, OrderGoods> {

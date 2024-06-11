@@ -10,8 +10,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * 跨域配置 web配置
  * 什么是跨域？（https://worktile.com/kb/ask/21153.html）
  *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {

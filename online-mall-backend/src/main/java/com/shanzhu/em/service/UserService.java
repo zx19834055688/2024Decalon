@@ -24,9 +24,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 用户 服务层
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Service
 public class UserService extends ServiceImpl<UserMapper, User> {

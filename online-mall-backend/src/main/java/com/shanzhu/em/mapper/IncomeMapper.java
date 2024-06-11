@@ -10,9 +10,6 @@ import java.util.Map;
 
 /**
  * 营收统计持久层 （mapper）
- *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Mapper
 public interface IncomeMapper {
