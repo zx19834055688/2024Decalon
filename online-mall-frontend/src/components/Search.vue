@@ -1,9 +1,4 @@
-<!--
- * 前台首页搜索栏
- *
- * @Author: ShanZhu
- * @Date: 2023-11-11
--->
+
 <template>
   <!--搜索栏-->
   <el-row>

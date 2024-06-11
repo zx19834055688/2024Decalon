@@ -9,8 +9,6 @@ import lombok.Data;
 /**
  * 用户地址
  *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Data
 @TableName("address")

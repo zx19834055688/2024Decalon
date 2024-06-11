@@ -33,12 +33,12 @@ export default {
     return {
       to: '/',//登陆成功跳转的页面
       user: {},
-      // backgroundDiv: {
-      //   backgroundImage:
-      //       "url(" + require("@/resource/img/login_back.png") + ")",
-      //   backgroundRepeat: "no-repeat",
-      //   backgroundSize: "100% 100%",
-      // },
+      backgroundDiv: {
+        backgroundImage:
+            "url(" + require("@/resource/img/login_back.png") + ")",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100% 100%",
+      },
     }
   },
   //页面创建

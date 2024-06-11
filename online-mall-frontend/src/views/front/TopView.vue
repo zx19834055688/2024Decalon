@@ -1,27 +1,28 @@
-<!--
- * 前台首页 相关内容
- *
- * @Author: ShanZhu
- * @Date: 2023-11-11
--->
+
 <template>
+<div>
+<!--  轮播图-->
   <div>
-    <search @search="handleSearch"></search>
+    <el-carousel trigger="click" height="600px">
+      <el-carousel-item v-for="item in 4" :key="item">
+        <h3 class="small">{{ item }}</h3>
+      </el-carousel-item>
+    </el-carousel>
+  </div>
+<!--  商品分类列表-->
+  <div class="block" style="margin-top: 100px; margin-left: 100px;">
+    <h2>乐享运动</h2>
+    <!--商品分类-->
+    <div class="good-menu">
+      <ul v-for="(item, index) in icons" :key="index">
+        <li>
 
-    <div class="main-box">
-      <div class="block" style="margin: 10px auto">
+          <i class="iconfont" v-html="item.value"></i>
 
-        <!--商品分类-->
-        <div class="good-menu">
-          <ul v-for="(item, index) in icons" :key="index">
-            <li>
-
-              <i class="iconfont" v-html="item.value"></i>
-
-              <!--跳转到商品分类对应列表-->
-              <span v-for="(category, index2) in item.categories" :key="index2">
+          <!--跳转到商品分类对应列表-->
+          <span v-for="(category, index2) in item.categories" :key="index2">
                 <router-link
-                  :to="{
+                    :to="{
                     path: '/goodlist',
                     query: { categoryId: category.id },
                   }"
@@ -33,66 +34,15 @@
 
               </span>
 
-            </li>
-          </ul>
-        </div>
-
-        <!--轮播图-->
-        <div>
-          <el-carousel height="370px" style="border-radius: 20px; width: 600px">
-
-            <el-carousel-item v-for="carousel in carousels" :key="carousel.id">
-              <router-link :to="'/goodview/' + carousel.goodId">
-                <img style="height: 370px; width: 600px"
-                  :src="baseApi + carousel.img"
-                />
-              </router-link>
-            </el-carousel-item>
-
-          </el-carousel>
-        </div>
-      </div>
-
-
-      <!--推荐商品-->
-      <div style="margin-top: 30px">
-        <span style="color: #e75c09">推荐商品</span>
-      </div>
-
-      <div style="margin: 20px auto">
-
-        <el-row :gutter="20">
-
-          <el-col
-            :span="6"
-            v-for="good in good"
-            :key="good.id"
-            style="margin-bottom: 20px"
-          >
-
-            <router-link :to="'goodview/' + good.id">
-
-              <el-card :body-style="{ padding: '0px', background: '#3472a6' }">
-                <img
-                  :src="baseApi + good.imgs"
-                  style="width: 100%; height: 300px"
-                />
-                <div style="padding: 5px 10px">
-                  <!--商品名称-->
-                  <span style="font-size: 18px; color: #ffffff">{{ good.name }}</span><br/>
-                  <!--商品价格-->
-                  <span style="color: #ffffff; font-size: 15px">￥{{ good.price }}</span>
-                </div>
-              </el-card>
-
-            </router-link>
-
-          </el-col>
-        </el-row>
-
-      </div>
+        </li>
+      </ul>
     </div>
   </div>
+<!--  关于-->
+  <div class="block" style="margin-top: 100px; margin-left: 100px;">
+    <h2>关于迪卡侬</h2>
+  </div>
+</div>
 </template>
 
 <script>
@@ -112,8 +62,14 @@ export default {
       icons: [],
       //搜索内容
       searchText: "",
-      baseApi: this.$store.state.baseApi,
+      // baseApi: this.$store.state.baseApi,
+      message: ''
     };
+  },
+  mounted() {
+    const hello = 'Hello World!'
+    debugger
+    this.message = hello
   },
   components: {
     search,
@@ -159,12 +115,24 @@ export default {
 </script>
 
 <style scoped>
-.main-box {
-  background-color: white;
-  border: white 2px solid;
-  border-radius: 40px;
-  padding: 20px 40px;
-  margin: 5px auto;
+.el-carousel__item h3 {
+  text-align: center;
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 600px;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+  background-color: #d3dce6;
+}
+.block{
+  width: fit-content;
 }
 .good-menu {
   float: left;

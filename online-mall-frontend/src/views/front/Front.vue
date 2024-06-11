@@ -1,9 +1,4 @@
-<!--
- * 前台首页
- *
- * @Author: ShanZhu
- * @Date: 2023-11-11
--->
+
 <template>
   <el-container style="height: 100%;width:100%;">
 
@@ -14,7 +9,7 @@
       ></Navagation>
     </el-header>
 
-    <el-main style="background-color: #3186cb;width:100%;">
+    <el-main style="background-color: white;width:100%;">
       <router-view />
     </el-main>
 

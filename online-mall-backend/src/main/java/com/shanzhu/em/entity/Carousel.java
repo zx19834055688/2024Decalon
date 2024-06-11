@@ -10,8 +10,6 @@ import lombok.Data;
 /**
  * 轮播图
  *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Data
 @TableName("carousel")

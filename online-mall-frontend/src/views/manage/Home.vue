@@ -1,8 +1,8 @@
 <!--
  * 后台管理欢迎页
  *
- * @Author: ShanZhu
- * @Date: 2023-11-11
+ * @Author: ZX
+ * @Date: 2024-6-5
 -->
 <template>
 <div style="text-align: center;width: 100%;font-size: 32px;">
