@@ -27,6 +27,11 @@ public class Category extends Model<Category> {
     private String name;
 
     /**
+     * 图标
+     */
+    private String imgs;
+
+    /**
      * 图标id
      */
     @TableField(exist = false)

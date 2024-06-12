@@ -1,8 +1,6 @@
 <!--
  * 订单列表
  *
- * @Author: ShanZhu
- * @Date: 2023-11-11
 -->
 <template>
 <div class="list" style="width: 55%;height:100%;margin: 20px auto">

@@ -4,38 +4,54 @@
 <!--  轮播图-->
   <div>
     <el-carousel trigger="click" height="600px">
-      <el-carousel-item v-for="item in 4" :key="item">
-        <h3 class="small">{{ item }}</h3>
+      <el-carousel-item v-for="carousel in carousels" :key="carousel.id">
+        <img style="height: 600px; width: fit-content"
+             :src="baseApi + carousel.img"
+        />
       </el-carousel-item>
     </el-carousel>
   </div>
 <!--  商品分类列表-->
-  <div class="block" style="margin-top: 100px; margin-left: 100px;">
+  <div class="block" style="margin-top: 50px; margin-left: 100px; margin-right: 100px;">
     <h2>乐享运动</h2>
     <!--商品分类-->
-    <div class="good-menu">
-      <ul v-for="(item, index) in icons" :key="index">
-        <li>
+    <div style="margin: 20px auto">
 
-          <i class="iconfont" v-html="item.value"></i>
+      <el-row :gutter="20">
+        <el-col :span="6" v-for="item in firstIconItems" :key="item.id">
+          <el-card>
+            <img
+                :src="baseApi + item.imgs"/>
+            <h1>{{item.name}}</h1>
+          </el-card>
+        </el-col>
+<!--        <el-col-->
+<!--            :span="6"-->
+<!--            v-for="good in good"-->
+<!--            :key="good.id"-->
+<!--            style="margin-bottom: 20px"-->
+<!--        >-->
 
-          <!--跳转到商品分类对应列表-->
-          <span v-for="(category, index2) in item.categories" :key="index2">
-                <router-link
-                    :to="{
-                    path: '/goodlist',
-                    query: { categoryId: category.id },
-                  }"
-                >
-                  <a href="/person"><span style="color: #3186cb">{{ category.name }}</span></a>
-                </router-link>
+<!--          <router-link :to="'goodview/' + good.id">-->
 
-                <span v-if="index2 != item.categories.length - 1">/</span>
+<!--            <el-card :body-style="{ padding: '0px', background: '#3472a6' }">-->
+<!--              <img-->
+<!--                  :src="baseApi + good.imgs"-->
+<!--                  style="width: 100%; height: 300px"-->
+<!--              />-->
+<!--              <div style="padding: 5px 10px">-->
+<!--                &lt;!&ndash;商品名称&ndash;&gt;-->
+<!--                <span style="font-size: 18px; color: #ffffff">{{ good.name }}</span><br/>-->
+<!--                &lt;!&ndash;商品价格&ndash;&gt;-->
+<!--                <span style="color: #ffffff; font-size: 15px">￥{{ good.price }}</span>-->
+<!--              </div>-->
+<!--            </el-card>-->
 
-              </span>
+<!--          </router-link>-->
 
-        </li>
-      </ul>
+<!--        </el-col>-->
+      </el-row>
+
     </div>
   </div>
 <!--  关于-->
@@ -97,6 +113,12 @@ export default {
         this.carousels = res.data;
       }
     });
+  },
+  computed:{
+    firstIconItems(){
+      console.log(this.icons[0])
+      return this.icons[0]?.categories || [];// 使用可选链操作符以避免潜在的null
+    }
   },
   //方法
   methods: {

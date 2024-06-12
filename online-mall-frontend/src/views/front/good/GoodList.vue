@@ -1,81 +1,18 @@
 <!--
  * 商品列表
  *
- * @Author: ShanZhu
- * @Date: 2023-11-11
 -->
 <template>
   <div>
-    <search @search="handleSearch"></search>
+    <div class="left-box">
 
-    <div class="main-box">
-      <div style="margin: 20px auto">
+      <h2>商品分类</h2>
+      <el-tree
 
-        <h2 style="color: #e75c09">商品分类</h2>
+      />
+    </div>
+    <div class="right-box">
 
-        <!--商品类别菜单-->
-        <el-row :gutter="20" style="font-size: 18px;">
-
-          <el-col v-for="(item, index) in icons" :key="index" :span="6">
-            <i class="iconfont" v-html="item.value"></i>
-            <span v-for="(category, index2) in item.categories" :key="index2">
-              <b>
-                <a href="#"
-                  @click.prevent="load(category.id)"
-                  :class="{
-                    black: categoryId == category.id,
-                    grey: categoryId != category.id,
-                  }"
-                >
-                  <span style="color: #3186cb">{{ category.name }}</span>
-                </a>
-              </b>
-              <span v-if="index2 != item.categories.length - 1"> / </span>
-            </span>
-          </el-col>
-
-        </el-row>
-
-        <hr/>
-
-        <el-row :gutter="20">
-
-          <el-col
-            :span="6"
-            v-for="good in good"
-            :key="good.id"
-            style="margin-bottom: 20px"
-          >
-            <!--商品格子-->
-            <router-link :to="'goodview/' + good.id">
-              <el-card :body-style="{ padding: '0px', background: '#3186cb' }">
-                <img
-                  :src="baseApi + good.imgs"
-                  style="width: 100%; height: 300px"
-                />
-                <div style="padding: 5px 10px">
-                  <span style="font-size: 18px;color: #ffffff">{{ good.name }}</span><br/>
-                  <span style="color: #ffffff; font-size: 15px">￥{{ good.price }}</span>
-                </div>
-              </el-card>
-            </router-link>
-          </el-col>
-
-        </el-row>
-      </div>
-      <!--分页控件-->
-      <div class="block" style="text-align: center">
-        <el-pagination
-          background
-          :hide-on-single-page="false"
-          :current-page="currentPage"
-          :page-size="pageSize"
-          layout="total, prev, pager, next"
-          :total="total"
-          @current-change="handleCurrentPage"
-        >
-        </el-pagination>
-      </div>
     </div>
   </div>
 </template>
@@ -153,16 +90,11 @@ export default {
     },
   },
 };
+
 </script>
 
 <style scoped>
-.main-box {
-  background-color: white;
-  border: white 2px solid;
-  border-radius: 40px;
-  padding: 20px 40px;
-  margin: 5px auto;
-}
+
 
 .black {
   color: black;

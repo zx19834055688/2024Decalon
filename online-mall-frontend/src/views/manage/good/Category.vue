@@ -1,8 +1,5 @@
 <!--
  * 后台商品分类管理
- *
- * @Author: ShanZhu
- * @Date: 2023-11-11
 -->
 <template>
   <div>
@@ -56,6 +53,7 @@
         </el-table-column>
 
         <el-table-column label="id" prop="id" width="60px"></el-table-column>
+        <el-table-column label="name" prop="name"></el-table-column>
         <el-table-column label="icon">
           <template slot-scope="scope">
             <i class="iconfont" v-html="scope.row.value"></i>
@@ -184,6 +182,7 @@ export default {
     //加载页面
     load() {
       this.request.get("/api/icon").then((res) => {
+        // this.$message.success(res.data);
         this.icons = res.data;
       });
     },

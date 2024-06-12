@@ -12,8 +12,6 @@ import java.util.List;
 /**
  * 图标
  *
- * @author: ShanZhu
- * @date: 2023-11-10
  */
 @Data
 @TableName(value = "icon")
@@ -29,6 +27,11 @@ public class Icon extends Model<Icon> {
      * 图标的标识码
      */
     private String value;
+
+    /**
+     * 图标的名称
+     */
+    private String name;
 
     /**
      * 图标对应的分类
