@@ -64,3 +64,24 @@ public class JwtInterceptor implements HandlerInterceptor {
         return true;
     }
 }
+//拦截器功能的详细分解：
+//组件注解:
+//使用@Component注解，使得Spring框架能够自动发现并管理这个Bean。
+//引入了RedisTemplate依赖，用于操作Redis数据库，特别是存储和检索与用户身份验证相关的数据。
+//预处理请求方法 (preHandle):
+//请求处理判断: 检查传入的handler是否为HandlerMethod实例，即判断请求是否映射到一个具体的处理方法。如果不是，则直接放行，返回true。
+//Token提取与验证:
+//从HTTP请求头中提取名为"token"的字段值作为JWT令牌。
+//判断token是否存在，若不存在，则抛出BizException异常，状态码为TOKEN_ERROR，提示用户token已失效需重新登录。
+//用户信息加载:
+//使用从请求头获取的token作为键，在Redis中查找对应的用户信息（User对象），键的格式为RedisConstants.USER_TOKEN_KEY + token。
+//若Redis中找不到对应用户信息，则同样抛出BizException异常，指示token失效。
+//找到用户信息后，利用UserHolder工具类将其保存至线程局部变量中，便于后续业务逻辑中直接使用用户信息。
+//刷新token有效期:
+//通过redisTemplate.expire方法更新token在Redis中的过期时间，延长其有效时长，参数包括键、过期时间（来自RedisConstants.USER_TOKEN_TTL）以及时间单位（分钟）。
+//JWT令牌验证:
+//构建一个JWT验证器JWTVerifier，使用HMAC256算法和用户名作为密钥对token进行校验。
+//尝试验证token，如果验证过程中捕获到JWTVerificationException异常，说明token无效或被篡改，此时抛出BizException，提示用户token验证失败。
+//结果返回:
+//如果上述所有验证步骤均通过，表明请求携带的token合法且用户身份已成功验证，函数最终返回true，允许请求继续向目标处理器方法传递。
+//综上所述，此JwtInterceptor拦截器实现了对HTTP请求中携带的JWT令牌的全面验证流程，包括token的存在性检查、用户信息的Redis缓存读取、token有效期的动态管理，以及严格的JWT令牌内容验证，是保障系统接口安全的重要防线。

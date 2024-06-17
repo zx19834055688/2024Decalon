@@ -1,8 +1,6 @@
 <!--
  * 后台轮播图管理
  *
- * @Author: ShanZhu
- * @Date: 2023-11-11
 -->
 <template>
   <div>

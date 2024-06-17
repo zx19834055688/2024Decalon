@@ -1,8 +1,6 @@
 <!--
  * 文件管理页面
  *
- * @Author: ShanZhu
- * @Date: 2023-11-11
 -->
 <template>
   <div>

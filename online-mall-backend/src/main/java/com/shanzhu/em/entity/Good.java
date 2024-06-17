@@ -12,8 +12,8 @@ import java.math.BigDecimal;
 /**
  * 商品
  *
- * @author: ShanZhu
- * @date: 2023-11-10
+ * @author: ZX
+ * @date: 2024-6-12
  */
 @Data
 @TableName("good")

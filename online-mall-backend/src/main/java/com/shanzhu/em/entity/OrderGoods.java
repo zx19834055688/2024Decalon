@@ -9,8 +9,8 @@ import lombok.Data;
 /**
  * 订单 - 商品关联
  *
- * @author: ShanZhu
- * @date: 2023-11-10
+ * @author: ZX
+ * @date: 2024-6-12
  */
 @Data
 @TableName("order_goods")

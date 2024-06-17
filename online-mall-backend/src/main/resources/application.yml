@@ -14,9 +14,6 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3307/decalonshop?serverTimezone=GMT%2b8&useSSL=false
-#    username: bianjiawang
-#    password: 12345678
-#    url: jdbc:mysql://124.223.95.146:3307/DB_OnlineMall?serverTimezone=GMT%2b8&useSSL=false
     username: root
     password: 123456
 

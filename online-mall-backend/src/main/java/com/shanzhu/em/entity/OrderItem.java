@@ -5,8 +5,8 @@ import lombok.Data;
 /**
  * 用来接收前台下订单时，传来的‘goods'参数
  *
- * @author: ShanZhu
- * @date: 2023-11-10
+ * @author: ZX
+ * @date: 2024-6-12
  */
 @Data
 public class OrderItem {

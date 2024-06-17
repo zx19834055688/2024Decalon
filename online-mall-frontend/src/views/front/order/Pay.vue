@@ -1,8 +1,8 @@
 <!--
  * 支付页面
  *
- * @Author: ShanZhu
- * @Date: 2023-11-11
+ * @Author: ZX
+ * @Date: 2024-6-12
 -->
 <template>
 <div style="margin-top: 10px;width: 50%;margin: 10px auto;background-color: white;text-align: center">

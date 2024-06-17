@@ -6,8 +6,8 @@ import lombok.Data;
 /**
  * 商品分类-图标
  *
- * @author: ShanZhu
- * @date: 2023-11-10
+ * @author: ZX
+ * @date: 2024-6-12
  */
 @Data
 @TableName(value="icon_category")

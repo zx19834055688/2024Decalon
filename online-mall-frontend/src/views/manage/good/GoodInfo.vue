@@ -1,8 +1,6 @@
 <!--
  * 商品信息
  *
- * @Author: ShanZhu
- * @Date: 2023-11-11
 -->
 <template>
   <div style="width: 1000px; margin: 50px auto">

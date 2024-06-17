@@ -2,7 +2,6 @@
  * 前台页面-导航栏
  *
  * @Author: ZX
- * @Date: 2023-11-11
 -->
 <template>
   <div class="navagation">
@@ -10,7 +9,7 @@
 
       <el-col :span="3">
         <div style="font-size: 20px; font-weight: bold; text-align: center">
-          <a href="/"> <img src="../resource/logo.png" style="width: 40px;position: relative; top: 13px;right: 6px">网上购物商城</a>
+          <a href="/" style="color: #000000"> <img src="../resource/logo.png" style="width: 40px;position: relative; top: 13px;right: 6px">购物商城</a>
         </div>
       </el-col>
 

@@ -57,8 +57,8 @@ export default {
       this.request.post("/login",this.user).then(res=>{
         console.log(res.data);
         if(res.code==='200'){
-          // this.$message.success({message: "登陆成功",showClose: true})
-          this.$message.success({message: res.data,showClose: true})
+          this.$message.success({message: "登陆成功",showClose: true})
+          // this.$message.success({message: res.data,showClose: true})
           this.$router.push(this.to)
           localStorage.setItem("user",JSON.stringify(res.data))
         }else{

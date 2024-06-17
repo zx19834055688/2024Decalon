@@ -2,7 +2,6 @@
  * 左侧滑动-菜单栏
  *
  * @Author: ZX
- * @Date: 2023-11-11
 -->
 <template>
   <el-menu :default-openeds="['2', 'good']" style="height: 100%;"
@@ -39,12 +38,13 @@
 
         <template slot="title">账户相关</template>
           <el-menu-item index="/manage/user" v-if="menuFlags.userMenu">用户管理</el-menu-item>
+          <el-menu-item index="/manage/avatar" v-if="menuFlags.avatarMenu">头像管理</el-menu-item>
         </el-submenu>
 
         <el-submenu v-if="fileGroup" index="file">
           <template slot="title">文件相关</template>
           <el-menu-item index="/manage/file" v-if="menuFlags.fileMenu">文件管理</el-menu-item>
-          <el-menu-item index="/manage/avatar" v-if="menuFlags.avatarMenu">头像管理</el-menu-item>
+
         </el-submenu>
 
         <el-submenu v-if="GoodGroup" index="good">
