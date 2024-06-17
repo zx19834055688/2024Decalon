@@ -41,7 +41,7 @@ export default {
         this.$message.error("两次密码不一致")
         return false;
       }
-      this.user.password = md5(this.user.password);
+      this.user.password = md5(this.user.password); //对输入的密码进行md5加密
       this.request.post("/register",this.user).then(res=>{
         if(res.code==='200'){
           this.$message.success("注册成功")

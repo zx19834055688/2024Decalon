@@ -35,7 +35,8 @@ public class JwtInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         String token = request.getHeader("token");
-        //如果不是映射到方法，直接通过
+        //如果不是映射到方法，直接通过。
+        //这里的“映射到方法”指的是在Web框架（如Spring MVC）中，一个请求通常会被映射到一个特定的方法上进行处理，这个方法封装在HandlerMethod类中。
         if(!(handler instanceof HandlerMethod)){
             return true;
         }

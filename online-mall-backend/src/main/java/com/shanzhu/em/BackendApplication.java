@@ -3,6 +3,7 @@ package com.shanzhu.em;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * SpringBoot 启动类
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 什么是SpringBoot？（https://www.php.cn/faq/498384.html）
  */
 @Slf4j
+@EnableSwagger2
 @SpringBootApplication
 public class BackendApplication {
 

@@ -24,6 +24,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 用户 服务层
+ *
+ * 密码123456经过md5转换后是e10adc3949ba59abbe56e057f20f883e
  */
 @Service
 public class UserService extends ServiceImpl<UserMapper, User> {
@@ -80,13 +82,13 @@ public class UserService extends ServiceImpl<UserMapper, User> {
      * @return 用户信息
      */
     public UserVo login(LoginForm loginForm) {
-        //查询用户
+        //查询用户，使用LambdaQueryWrapper查询符合用户名和密码等于指定值的User对象，并返回查询结果的第一条记录。
         User user = lambdaQuery()
                 .eq(User::getUsername, loginForm.getUsername())
                 .eq(User::getPassword, loginForm.getPassword())
                 .one();
 
-        //用户不存在
+        //用户不存在，如果user为null，则抛出一个名为BizException的自定义异常，异常代码为Status.CODE_403，异常信息为"用户名或密码错误"。
         if (user == null) {
             throw new BizException(Status.CODE_403, "用户名或密码错误");
         }
@@ -94,7 +96,7 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         //生成token
         String token = TokenUtils.genToken(user.getId().toString(), user.getUsername());
 
-        //把用户存到redis中
+        //把用户存到redis中，方便快速调用
         redisTemplate.opsForValue().set(RedisConstants.USER_TOKEN_KEY + token, user);
 
         //jwt不设置过期时间，只设置redis过期时间。

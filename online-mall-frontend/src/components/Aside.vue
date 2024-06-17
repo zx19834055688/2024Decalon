@@ -36,14 +36,15 @@
         <i class="el-icon-menu"></i><span slot="title">系统管理</span></template>
         <el-submenu v-show="userGroup" index="user">
 
-        <template slot="title">账户相关</template>
+        <template slot="title">账户管理</template>
           <el-menu-item index="/manage/user" v-if="menuFlags.userMenu">用户管理</el-menu-item>
-          <el-menu-item index="/manage/avatar" v-if="menuFlags.avatarMenu">头像管理</el-menu-item>
+
         </el-submenu>
 
         <el-submenu v-if="fileGroup" index="file">
-          <template slot="title">文件相关</template>
-          <el-menu-item index="/manage/file" v-if="menuFlags.fileMenu">文件管理</el-menu-item>
+          <template slot="title">文件管理</template>
+          <el-menu-item index="/manage/file" v-if="menuFlags.fileMenu">添加/删除</el-menu-item>
+          <el-menu-item index="/manage/avatar" v-if="menuFlags.avatarMenu">头像文件</el-menu-item>
 
         </el-submenu>
 
@@ -58,7 +59,7 @@
       <el-submenu v-if="incomeGroup" index="income">
         <template slot="title">销售额统计</template>
         <el-menu-item index="/manage/incomeChart" v-if="menuFlags.incomeChartMenu">图表分析</el-menu-item>
-        <el-menu-item index="/manage/incomeRank" v-if="menuFlags.incomeRankMenu">收入排行榜</el-menu-item>
+        <el-menu-item index="/manage/incomeRank" v-if="menuFlags.incomeRankMenu">销售排行榜</el-menu-item>
       </el-submenu>
 
     </el-submenu>

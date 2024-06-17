@@ -4,7 +4,6 @@
     <resultMap id="IconCategoryMap" type="com.shanzhu.em.entity.Icon">
         <id property="id" column="id"></id>
         <result property="value" column="value"></result>
-        <result property="name" column="name"></result>
         <collection property="categories" column="id" select="selectCategories"></collection>
     </resultMap>
     <select id="selectCategories" resultType="com.shanzhu.em.entity.Category">

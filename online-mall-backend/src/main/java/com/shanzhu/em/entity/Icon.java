@@ -29,11 +29,6 @@ public class Icon extends Model<Icon> {
     private String value;
 
     /**
-     * 图标的名称
-     */
-    private String name;
-
-    /**
      * 图标对应的分类
      */
     @TableField(exist = false)

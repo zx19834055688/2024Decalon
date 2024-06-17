@@ -53,7 +53,6 @@
         </el-table-column>
 
         <el-table-column label="id" prop="id" width="60px"></el-table-column>
-        <el-table-column label="name" prop="name"></el-table-column>
         <el-table-column label="icon">
           <template slot-scope="scope">
             <i class="iconfont" v-html="scope.row.value"></i>
