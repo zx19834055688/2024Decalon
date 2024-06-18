@@ -19,6 +19,7 @@ public class MybatisPlusConfig {
      * 分页插件配置
      *
      * @return MybatisPlusInterceptor
+     * 拦截器截取数据
      */
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {

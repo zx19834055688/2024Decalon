@@ -15,7 +15,7 @@
 
         <!--商品类别菜单-->
         <el-row :gutter="20" style="font-size: 18px;">
-
+<!--          第三方组件库-->
           <el-col v-for="(item, index) in icons" :key="index" :span="6">
             <i class="iconfont" v-html="item.value"></i>
             <span v-for="(category, index2) in item.categories" :key="index2">

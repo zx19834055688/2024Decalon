@@ -37,6 +37,7 @@
 
             <el-carousel-item v-for="carousel in carousels" :key="carousel.id">
               <router-link :to="'/goodview/' + carousel.goodId">
+<!--                点击跳转链接-->
                 <img style="height: 370px; width: 600px"
                      :src="baseApi + carousel.img"
                 />
