@@ -147,3 +147,6 @@ function isLogin() {
   }
 }
 export default router
+
+// 5. 懒加载组件
+// 组件使用了动态导入（如component: () => import('../views/front/Front.vue')），这是一种懒加载技术，可以提升首屏加载速度，只有当路由被访问时，对应的组件才会被加载。

@@ -96,7 +96,7 @@ public class UserService extends ServiceImpl<UserMapper, User> {
         //生成token
         String token = TokenUtils.genToken(user.getId().toString(), user.getUsername());
 
-        //把用户存到redis中，方便快速调用
+        //把用户存到redis中，方便快速调用 
         redisTemplate.opsForValue().set(RedisConstants.USER_TOKEN_KEY + token, user);
 
         //jwt不设置过期时间，只设置redis过期时间。
